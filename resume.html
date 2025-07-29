@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kuldeep Jangid | Resume</title>
+   <link rel="stylesheet" href="index.css"/>
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: linear-gradient(135deg, #e3f2fd, #fce4ec);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      justify-content: center;
+      padding: 20px;
+      box-sizing: border-box;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 80px;
+       padding-bottom: 120px;
+    }
+    .resume {
+      background: #fff;
+      width: 900px; /* wider than A4 */
+      min-height: 1500px; /* increased height */
+      padding: 30px 40px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      border-radius: 8px;
+      box-sizing: border-box;
+      color: #212121;
+      position: relative;
+    }
+    h1 {
+      font-size: 28px;
+      color: #283593;
+      margin-bottom: 4px;
+    }
+    h2 {
+      font-size: 20px;
+      color: #283593;
+      border-bottom: 2px solid #ff9800;
+      padding-bottom: 4px;
+      margin-top: 26px;
+      margin-bottom: 8px;
+    }
+    p, li {
+      font-size: 14px;
+      line-height: 1.45;
+      margin: 6px 0;
+    }
+    ul, ol {
+      padding-left: 20px;
+      margin: 0;
+    }
+    a {
+      color: #283593;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .contact-links a:not(:last-child)::after {
+      content: "|";
+      margin: 0 6px;
+      color: #999;
+    }
+    .btn-container {
+      margin-top: 16px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      position: sticky;
+      bottom: 0;
+      background: transparent;
+      padding: 10px 0 0 0;
+      z-index: 1000;
+    }
+    button.btn-download {
+      background-color: #283593;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      margin: 1px;
+      font-size: 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      box-shadow: 0 3px 6px rgba(40,53,147,0.3);
+    }
+    button.btn-download:hover {
+      background-color: #1a237e;
+    }
+    @media (max-width: 950px) {
+      .resume {
+        width: 100%;
+        min-height: auto;
+        padding: 20px;
+      }
+      h1 {
+        font-size: 24px;
+      }
+      h2 {
+        font-size: 18px;
+      }
+      p, li {
+        font-size: 13px;
+      }
+      button.btn-download {
+        font-size: 14px;
+        padding: 10px 18px;
+      }
+    }
+    @media print {
+      body {
+        background: white !important;
+        padding: 0 !important;
+        margin: 0 !important;
+      }
+      .btn-container {
+        display: none !important;
+      }
+      .resume {
+        box-shadow: none !important;
+        border-radius: 0 !important;
+        width: auto !important;
+        min-height: auto !important;
+        padding: 10mm 15mm !important;
+      }
+    }
+
+
+  </style>
+</head>
+ 
+  <div class="resume" id="resume">
+    <h1>Kuldeep Jangid</h1>
+    <p class="contact-links">
+      <strong>Phone:</strong> +91 6376787180 &nbsp; 
+      <a href="https://www.linkedin.com/in/kuldeep-jangid-jaipur/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/KuldeepJangid225" target="_blank" rel="noopener">GitHub</a>
+      <a href="http://www.techkuldeep.xyz/" target="_blank" rel="noopener">Portfolio</a>
+           <a href="https://x.com/KuldeepJan66228" target="_blank" rel="noopener">Twitter</a>
+    </p>
+
+    <h2>Objective</h2>
+    <p>
+      Motivated and detail-oriented Java developer eager to contribute technical skills in an entry-level role. Committed to learning and growing within a collaborative team.
+    </p>
+
+    <h2>Technical Skills</h2>
+    <ul>
+      <li><strong>Frontend:</strong> HTML, CSS, JavaScript</li>
+      <li><strong>Backend:</strong>  Core Java, Jakarta EE, C Language, SQL.</li>
+      <li><strong>Frameworks:</strong> Spring Boot (Basic), Collections Framework, RESTful APIs, JSON, XML.</li>
+      <li><strong>Database:</strong> MySQL, JDBC.</li>
+      <li><strong>Tools:</strong> IntelliJ IDEA, VS Code, Eclipse, XAMPP, Postman, GitHub, Apache Tomcat, Maven.</li>
+      <li><strong>Other:</strong> MS Word, MS Excel, MS PowerPoint, Outlook, OneNote, and Access.</li>
+    </ul>
+
+    <h2>Projects</h2>
+    <ol>
+      <li>
+        <strong>🛒 Rent Wala – Rental E-Commerce Website</strong><br>
+        <em>Overview:</em> A full-featured rental e-commerce platform that allows users to rent a wide range of items including electronics, furniture, and event supplies.<br>
+        <em>Key Features:</em>
+        <ul>
+          <li>User & Admin login with authentication and session management</li>
+          <li>Product catalog with search, filtering, and sorting</li>
+          <li>Rental cart with start/end date selection and automatic pricing calculation</li>
+          <li>Admin panel for product management, rental approvals, and user control</li>
+          <li>MySQL database integration for storing user, product, and rental data</li>
+          <li>Email confirmation for new rentals and updates (via SMTP)</li>
+        </ul>
+        <em>Tech Stack:</em> Java (JSP, Servlets), HTML, CSS, JavaScript, MySQL, Apache Tomcat, JDBC<br>
+        <a href="https://github.com/your-username/rent-wala" target="_blank">View on GitHub</a>
+      </li>
+
+      <li>
+        <strong>🔐 Secure Login System with Email Verification</strong><br>
+        <em>Overview:</em> A secure login and registration system designed with Java Servlets, JDBC, and MySQL. Integrated with email verification to activate user accounts.<br>
+        <em>Key Features:</em>
+        <ul>
+          <li>Login, Registration, Forgot Password, and Reset Password pages</li>
+          <li>Validation for email, password strength, and unique user check</li>
+          <li>Verification email with token-based activation link</li>
+          <li>MySQL-based secure storage with encryption (SHA-256 for password hash)</li>
+        </ul>
+        <em>Tech Stack:</em> Java, Servlets, HTML/CSS, MySQL, SMTP, JDBC<br>
+        <a href="https://github.com/your-username/secure-login-system" target="_blank">View on GitHub</a>
+      </li>
+    </ol>
+
+    <h2>Certificates & Awards</h2>
+    <ul>
+      <li><a href="https://docs.google.com/document/d/15qVhJm_l2Jdd8E4w_2NEoTolikia8Hd7dlhZqA7jtXk/edit?usp=sharing" target="_blank" rel="noopener">Java Certification – Code Planet</a></li>
+      <li><a href="https://docs.google.com/document/d/15HzA6RpJib3xvAfMnlL4aqO2gbKIKvNRHrAnsXZsqtw/edit?usp=sharing" target="_blank" rel="noopener">Cybersecurity – Infosys/Springboard</a></li>
+      <li><a href="https://docs.google.com/document/d/11ZT7qrCeOpIUOq7XMr1x_PSSmLaf3M2jfCXeLObPh0c/edit?usp=sharing" target="_blank" rel="noopener">RSCIT – VMOU</a></li>
+      <li><a href="https://docs.google.com/document/d/11ZT7qrCeOpIUOq7XMr1x_PSSmLaf3M2jfCXeLObPh0c/edit?usp=sharing" target="_blank" rel="noopener">2nd Rank – Subodh College</a></li>
+    </ul>
+
+    <h2>Education</h2>
+    <p>
+      <strong>Bachelor of Computer Applications (BCA)</strong><br/>
+      University of Rajasthan (2021 – 2026)<br/>
+      CGPA: 8.4<br/>
+      Relevant Courses: Java, DBMS, DSA, Operating Systems, OOP
+    </p>
+  </div>
+
+  <div class="btn-container">
+    <button class="btn-download" onclick="downloadPDF()">Download Resume PDF</button>
+    <div class="button ">
+    <a href="index.html"  ><button class="btn-download">Back</button></a>
+  </div></div>
+ 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <script>
+    function downloadPDF() {
+      const element = document.getElementById('resume');
+      const opt = {
+        margin:       [10, 10, 10, 10], // mm
+        filename:     'Kuldeep_Jangid_Resume.pdf',
+        image:        { type: 'jpeg', quality: 1 },
+        html2canvas:  { scale: 3, useCORS: true },
+        jsPDF:        { unit: 'mm', format: 'a3', orientation: 'portrait' }  // Changed from a4 to a3 for more space
+      };
+      html2pdf().set(opt).from(element).save();
+    }
+   
+  </script>
+</body>
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About | Kuldeep Jangid</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #e3f2fd, #fce4ec);
+    }
+
+    .page-wrapper {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      background-color: #fff;
+      border-bottom: 1px solid #ccc;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 15px 20px;
+    }
+
+    header h2 {
+      color: #283593;
+      margin: 0;
+    }
+
+    .menu-toggle {
+      display: none;
+      font-size: 24px;
+      color: #283593;
+      cursor: pointer;
+    }
+
+    #nav-links {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      padding: 0;
+      margin: 0;
+    }
+
+    #nav-links li a {
+      text-decoration: none;
+      color: #283593;
+      font-weight: bold;
+    }
+
+    #nav-links li a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      flex: 1;
+      padding: 30px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    main h1 {
+      color: #283593;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    main p {
+      line-height: 1.8;
+      font-size: 16px;
+      color: #333;
+    }
+
+    footer {
+      background-color: #f3f3f3;
+      padding: 10px;
+      text-align: center;
+      box-shadow: 0 -2px 6px rgba(0,0,0,0.1);
+    }
+
+    .footer-content h2 {
+      margin: 5px;
+      color: #283593;
+    }
+
+    .social-links a {
+      margin: 0 10px;
+      color: #283593;
+      font-size: 20px;
+      text-decoration: none;
+    }
+
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: block;
+      }
+
+      #nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: white;
+        width: 100%;
+        border-top: 1px solid #ddd;
+      }
+
+      #nav-links.active {
+        display: flex;
+      }
+
+      #nav-links li {
+        text-align: center;
+        padding: 10px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page-wrapper">
+    <!-- Header -->
+    <header>
+      <h2>Kuldeep</h2>
+      <div class="menu-toggle" onclick="toggleMenu()">
+        <i class="fas fa-bars"></i>
+      </div>
+      <ul id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+      <h1>About Me</h1>
+      <p>
+        Hello! I'm <strong>Kuldeep Jangid</strong>, a passionate and aspiring software developer from India. I specialize in Java and web development, and I'm currently pursuing my final year of BCA. With a strong foundation in Java,Jakarta EE , SQL, HTML, CSS, and JavaScript, I enjoy building responsive and user-friendly websites. I'm also familiar with frameworks like Spring Boot and databases like MySQL.
+      </p>
+      <p>
+        I believe in continuous learning and self-improvement. I actively work on projects that challenge my skills and help me grow as a developer. My goal is to become a full-stack developer and contribute to impactful software solutions."
+      </p>
+      <p>
+        In my free time, I explore new technologies, contribute to open-source, and share knowledge through blogs and tutorials. I'm excited to collaborate with others and be a part of the dynamic tech community.
+      </p>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-content">
+        <h2>Kuldeep Jangid</h2>
+        <div class="social-links">
+          <a href="https://www.youtube.com/in/"><i class="fab fa-youtube"></i></a>
+          <a href="https://www.linkedin.com/in/kuldeep-jangid-jaipur/"><i class="fab fa-linkedin"></i></a>
+          <a href="mailto:kj623178@gmail.com"><i class="fas fa-envelope"></i></a>
+          <a href="tel:+916376778170"><i class="fas fa-phone"></i></a>
+        </div>
+        <p>&copy; 2025 Kuldeep Jangid. All rights reserved.</p>
+      </div>
+    </footer>
+  </div>
+
+  <!-- JavaScript for Mobile Menu Toggle -->
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById('nav-links');
+      nav.classList.toggle('active');
+    }
+  </script>
+</body>
+</html>

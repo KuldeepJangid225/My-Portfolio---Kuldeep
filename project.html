@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects - Kuldeep Jangid</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #e3f2fd, #fce4ec);
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      background-color: #fff;
+      color: #283593;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+
+    header h2 {
+      margin: 0;
+    }
+
+    .menu-toggle {
+      display: none;
+      cursor: pointer;
+      margin-left: auto;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav li {
+      margin-left: 20px;
+    }
+
+    nav a {
+      color: #283593;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    main {
+      flex: 1;
+      padding: 20px;
+    }
+
+    .project {
+      background: white;
+      border-left: 5px solid #283593;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .project h3 {
+      margin-top: 0;
+      color: #283593;
+    }
+
+    footer {
+      background-color: #fff;
+      color: #283593;
+      text-align: center;
+      padding: 20px;
+      margin-top: auto;
+    }
+
+    .social-links a {
+      color: #283593;
+      margin: 0 10px;
+      font-size: 1.2rem;
+    }
+
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: block;
+      }
+
+      nav {
+        position: absolute;
+        top: 60px;
+        right: 20px;
+      }
+
+      nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: #fff;
+        border-radius: 8px;
+        width: 200px;
+      }
+
+      nav ul.active {
+        display: flex;
+      }
+
+      nav li {
+        margin: 10px 0;
+        text-align: center;
+      }
+    }
+
+    
+  </style>
+</head>
+
+<body>
+  <header>
+    <h2>Kuldeep</h2>
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <i class="fas fa-bars"></i>
+    </div>
+    <nav>
+      <ul id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Projects</h1>
+
+    <div class="project">
+      <h3>1. Rent Wala – Rental E-Commerce Website</h3>
+      <p><strong>Overview:</strong> Rent Wala is a web-based e-commerce platform for renting a wide range of items including electronics, vehicles, furniture, and wedding/event services.</p>
+      <p><strong>Technologies Used:</strong> Java, Servlets, JSP, MySQL, HTML, CSS, JavaScript, Apache Tomcat.</p>
+      <p><strong>Key Features:</strong></p>
+      <ul>
+        <li>User and Admin login system</li>
+        <li>Rental categories: Electronics, Vehicles, Furniture, Marriage Halls, etc.</li>
+        <li>Product search, booking, and rental duration tracking</li>
+        <li>Admin panel for managing items and orders</li>
+        <li>Responsive UI with secure session handling</li>
+      </ul>
+      
+       <a href="www.techkuldeep.xyz" ><button class="btn-download" style="background-color: #283593; color: #fff;border-radius: 24px; font-size: 16px; position: relative; border: none;
+      padding: 12px 24px;
+      margin: 1px;
+      font-size: 16px;
+      border-radius: 24px;
+      cursor: pointer;
+      box-shadow: 0 3px 6px rgba(40,53,147,0.3);">Links</button></a>
+    </div>
+
+    <div class="project">
+      <h3>2. Login System (Java + Database)</h3>
+      <p><strong>Overview:</strong> Developed a secure login and registration system using Java, Advanced Java (Servlets), and JDBC. Integrated it with a frontend interface to handle user input and authentication with backend validation.</p>
+      <p><strong>Tech Stack:</strong> Core Java, Advanced Java, JDBC, MySQL, HTML, CSS, JavaScript.</p>
+      <p><strong>Key Features:</strong></p>
+      <ul>
+        <li>Registration and login forms with frontend validation</li>
+        <li>Secure credential verification via JDBC</li>
+        <li>Database management using MySQL</li>
+        <li>Servlet-based request handling and error messaging</li>
+      </ul>
+          <a href="www.techkuldeep.xyz" ><button class="btn-download" style="background-color: #283593; color: #fff;border-radius: 24px; font-size: 16px; position: relative; border: none;
+      padding: 12px 24px;
+      margin: 1px;
+      font-size: 16px;
+      border-radius: 24px;
+      cursor: pointer;
+      box-shadow: 0 3px 6px rgba(40,53,147,0.3);">Links</button></a>
+  </main>
+
+  <footer>
+    <h2>Kuldeep Jangid</h2>
+    <div class="social-links">
+     <a href="https://www.youtube.com" target="_blank" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          <a href="https://www.linkedin.com/in/kuldeep-jangid-jaipur/" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="mailto:kj623178@gmail.com" title="Gmail"><i class="fa-solid fa-envelope"></i></a>
+          <a href="tel:+916376778170" title="Phone"><i class="fa-solid fa-phone"></i></a>
+    </div>
+    <p>&copy; 2025 Kuldeep Jangid. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById("nav-links");
+      nav.classList.toggle("active");
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kuldeep Jangid Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    html, body {
+      height: 100%;
+      background: linear-gradient(to right, #e3f2fd, #fce4ec);
+    }
+
+    body {
+      color: #283593;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    .page-wrapper {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      background-color: #fff;
+      align-items: center;
+      padding: 20px;
+      flex-wrap: wrap;
+      position: relative;
+    }
+    nav h2 {
+      color: #283593;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    nav a {
+      text-decoration: none;
+      color: #283593;
+      font-weight: 500;
+    }
+    nav ul li a i {
+      margin-right: 6px;
+      color: #283593;
+    }
+    .menu-toggle {
+      display: none;
+      font-size: 24px;
+      cursor: pointer;
+      color: #283593;
+    }
+    .contact-btn {
+      background: #283593;
+      padding: 8px 16px;
+      border-radius: 30px;
+      color:#fff;
+      font-weight: bold;
+      display: inline-block;
+    }
+    .hero {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 50px 40px;
+      flex-wrap: wrap;
+    }
+    .hero-left {
+      max-width: 600px;
+    }
+    .hero-left h3 {
+      color: #283593;
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+    .hero-left h1 {
+      font-size: 36px;
+      line-height: 1.4;
+    }
+    .hero-left h1 span {
+      color: #283593;
+    }
+    .hero-left p {
+      margin: 20px 0;
+      line-height: 1.6;
+    }
+    .social-icons {
+      margin-top: 10px;
+    }
+    .social-icons a {
+      color: #283593;
+      font-size: 24px;
+      margin-right: 15px;
+      text-decoration: none;
+    }
+    .contact-btn-outline {
+      margin-top: 20px;
+      background: #fff;
+      color: #283593;
+      font-weight: bold;
+      border-radius: 25px;
+      padding: 10px 24px;
+      display: inline-block;
+    }
+    .hero-right {
+      position: relative;
+      width: 320px;
+      height: 320px;
+      background: linear-gradient(to right, #e3f2fd, #fce4ec);
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+    .hero-right img {
+      width: 72%;
+      border-radius: 50%;
+      object-fit: cover;
+      transform: scale(1.1);
+    }
+    .main-content {
+      flex: 1;
+      padding: 30px 20px;
+    }
+    .footer {
+      background-color: #f3f3f3;
+      color: #283593;
+      text-align: center;
+      padding: 2rem 1rem;
+      box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.3);
+    }
+    .footer .social-links a {
+      margin: 0 10px;
+      color: #283593;
+      font-size: 1.5rem;
+    }
+    .section-title {
+      text-align: center;
+      margin: 60px 0 30px;
+      color: #283593;
+      font-size: 24px;
+    }
+    .skills, .projects {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+    .skill-box, .project-box {
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 15px;
+      text-align: center;
+      width: 250px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .skill-box i, .project-box i {
+      font-size: 2rem;
+      margin-bottom: 10px;
+      color: #283593;
+    }
+    .role {
+      font-size: 20px;
+    }
+    #changing-role {
+      color: #283593;
+      font-weight: bold;
+    }
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      }
+      nav ul {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        background: #e3f2fd;
+        padding: 10px;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        z-index: 1000;
+      }
+      nav ul.active {
+        display: flex;
+      }
+      .menu-toggle {
+        display: block;
+      }
+      .hero {
+        flex-direction: column-reverse;
+        align-items: center;
+        text-align: center;
+        padding: 40px 20px;
+      }
+      .hero-left {
+        max-width: 100%;
+      }
+      .profile-img {
+        width: 200px;
+        height: 200px;
+      }
+      .skill-box, .project-box {
+        width: 100%;
+        max-width: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page-wrapper">
+    <nav>
+      <h2>Kuldeep</h2>
+      <div class="menu-toggle" onclick="toggleMenu()">
+        <i class="fas fa-bars"></i>
+      </div>
+      <ul id="nav-links">
+        <li><a href="index.html"><i class="fas fa-home"></i>Home</a></li>
+        <li><a href="about.html"><i class="fas fa-user"></i>About</a></li>
+        <li><a href="resume.html"><i class="fas fa-graduation-cap"></i>Resume</a></li>
+        <li><a href="project.html"><i class="fas fa-project-diagram"></i>Projects</a></li>
+        <li><a href="contact.html"><i class="fas fa-envelope"></i>Contact</a></li>
+      </ul>
+    </nav>
+
+    <main class="main-content">
+      <section class="hero">
+        <div class="hero-left">
+          <h3>— Hello</h3>
+          <h1>
+            <p class="role">I am <span id="changing">Kuldeep Jangid</span></p>
+            <p class="role"><span id="changing-role">Software Developer</span></p>
+          </h1>
+          <p>Hello! I’m <strong>Kuldeep Jangid</strong>, a passionate and dedicated <strong>fresher Software Developer</strong> with a strong foundation in Java, web technologies, and database systems. I enjoy building dynamic, user-friendly web applications and constantly strive to improve my skills in full-stack development. I’m eager to contribute to real-world projects, learn from experienced teams, and grow as a professional in the tech industry.</p>
+          <div class="social-icons">
+            <a href="https://x.com/KuldeepJan66228"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.facebook.com/in/"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.linkedin.com/in/kuldeep-jangid-jaipur/"><i class="fab fa-linkedin"></i></a>
+          </div>
+          <a href="contact.html" class="contact-btn-outline">Contact Me</a>
+        </div>
+        <div class="hero-right">
+          <img src="photos/WhatsApp_Image_2025-07-14_at_5.11.08_PM-removebg-preview.png" alt="Kuldeep Jangid">
+        </div>
+      </section>
+
+      <section class="section-title">Skills</section>
+      <div class="skills">
+        <div class="skill-box"><i class="fab fa-java"></i><p>Java</p></div>
+        <div class="skill-box"><i class="fab fa-js"></i><p>JavaScript</p></div>
+        <div class="skill-box"><i class="fab fa-html5"></i><p>HTML</p></div>
+        <div class="skill-box"><i class="fab fa-css3"></i><p>CSS</p></div>
+        <div class="skill-box"><i class="fas fa-database"></i><p>SQL</p></div>
+        <div class="skill-box"><i class="fas fa-code"></i><p>C Language</p></div>
+        <div class="skill-box"><i class="fas fa-cogs"></i><p>Advanced Java</p></div>
+        <div class="skill-box"><i class="fab fa-react"></i><p>Spring Framework</p></div>
+        <div class="skill-box"><i class="fas fa-server"></i><p>MySQL</p></div>
+      </div>
+
+      <section class="section-title">Projects</section>
+      <div class="projects">
+        <div class="project-box"><i class="fas fa-laptop-code"></i><p>E-commerce Website - RentWala</p></div>
+        <div class="project-box"><i class="fas fa-user-shield"></i><p>Login System</p></div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <h2>Kuldeep Jangid</h2>
+        <div class="social-links">
+          <a href="https://www.youtube.com" target="_blank" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          <a href="https://www.linkedin.com/in/kuldeep-jangid-jaipur/" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="mailto:kj623178@gmail.com" title="Gmail"><i class="fa-solid fa-envelope"></i></a>
+          <a href="tel:+916376778170" title="Phone"><i class="fa-solid fa-phone"></i></a>
+        </div>
+        <p>&copy; 2025 Kuldeep Jangid. All rights reserved.</p>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    const roles = ["Software Developer", "Web Developer", "Coder", "Engineer"];
+    let index = 0;
+    const roleElement = document.getElementById("changing-role");
+    setInterval(() => {
+      index = (index + 1) % roles.length;
+      roleElement.textContent = roles[index];
+    }, 2000);
+
+    function toggleMenu() {
+      const navLinks = document.getElementById('nav-links');
+      navLinks.classList.toggle('active');
+    }
+  </script>
+</body>
+</html>

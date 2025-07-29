@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact | Kuldeep Jangid</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #e3f2fd, #fce4ec);
+    }
+
+    header {
+      width: 100%;
+      background-color: #fff;
+      border-bottom: 1px solid #ccc;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 15px 20px;
+    }
+
+    header h2 {
+      color: #283593;
+      margin: 0;
+    }
+
+    .menu-toggle {
+      display: none;
+      font-size: 24px;
+      color: #283593;
+      cursor: pointer;
+    }
+
+    #nav-links {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      padding: 0;
+      margin: 0;
+    }
+
+    #nav-links li a {
+      text-decoration: none;
+      color: #283593;
+      font-weight: bold;
+    }
+
+    #nav-links li a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      width: 100%;
+      background-color: #f3f3f3;
+      padding: 10px;
+      text-align: center;
+      box-shadow: 0 -2px 6px rgba(0,0,0,0.1);
+      margin-top: 30px;
+    }
+
+    .footer-content h2 {
+      margin: 5px;
+      color: #283593;
+    }
+
+    .social-links a {
+      margin: 0 10px;
+      color: #283593;
+      font-size: 20px;
+      text-decoration: none;
+    }
+
+    .main-content {
+      padding: 30px 20px;
+    }
+
+    .form-container {
+      max-width: 600px;
+      margin: auto;
+      background: #fff;
+      padding: 30px 40px;
+      border-radius: 8px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+
+    .form-container h1 {
+      text-align: center;
+      color: #283593;
+    }
+
+    form label {
+      font-weight: bold;
+      display: block;
+      margin: 12px 0 6px;
+      color: #333;
+    }
+
+    form input, form textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+
+    form textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    form button {
+      background-color: #283593;
+      color: #fff;
+      border: none;
+      padding: 12px 20px;
+      margin-top: 20px;
+      font-size: 16px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    form button:hover {
+      background-color: #1a237e;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: block;
+      }
+
+      #nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: white;
+        width: 100%;
+        border-top: 1px solid #ddd;
+      }
+
+      #nav-links.active {
+        display: flex;
+      }
+
+      #nav-links li {
+        text-align: center;
+        padding: 10px 0;
+      }
+    }
+    html, body {
+  height: 100%;
+  margin: 0;
+}
+
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+  padding: 30px 20px;
+}
+
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+   <div class="page-wrapper">
+  <header >
+    <h2>Kuldeep</h2>
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <i class="fas fa-bars"></i>
+    </div>
+    <ul id="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="resume.html">Resume</a></li>
+      <li><a href="project.html">Projects</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </header>
+
+  <!-- Main Content -->
+  <div class="main-content">
+    <div class="form-container">
+      <h1>Contact Me</h1>
+      <form action="https://formspree.io/f/xjkovvke" method="post">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" required />
+
+        <label for="message">Your Message</label>
+        <textarea id="message" name="message" required></textarea>
+
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <h2>Kuldeep Jangid</h2>
+      <div class="social-links">
+        <a href="https://www.youtube.com/in/"><i class="fab fa-youtube"></i></a>
+        <a href="https://www.linkedin.com/in/kuldeep-jangid-jaipur/"><i class="fab fa-linkedin"></i></a>
+        <a href="mailto:kj623178@gmail.com"><i class="fas fa-envelope"></i></a>
+        <a href="tel:+916376778170"><i class="fas fa-phone"></i></a>
+      </div>
+      <p>&copy; 2025 Kuldeep Jangid. All rights reserved.</p>
+    </div>
+  </footer>
+</div>
+  <!-- JS for Mobile Toggle -->
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById('nav-links');
+      nav.classList.toggle('active');
+    }
+  </script>
+
+</body>
+</html>

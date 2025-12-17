@@ -118,22 +118,37 @@
       display: inline-block;
     }
     .hero-right {
-      position: relative;
-      width: 320px;
-      height: 320px;
-      background: linear-gradient(to right, #e3f2fd, #fce4ec);
-      border-radius: 50%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      overflow: hidden;
-    }
-    .hero-right img {
-      width: 72%;
-      border-radius: 50%;
-      object-fit: cover;
-      transform: scale(1.1);
-    }
+  position: relative;
+  width: 280px;
+  height: 300px;
+  background: linear-gradient(135deg, #e3f2fd, #fce4ec);
+  border-radius: 140px; /* smooth oval */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 15px 40px rgba(40, 53, 147, 0.25);
+  overflow: hidden;
+}
+
+/* subtle inner glow */
+.hero-right::before {
+  content: "";
+  position: absolute;
+  inset: 8px;
+  border-radius: 130px;
+  background: rgba(255, 255, 255, 0.5);
+  z-index: 0;
+}
+
+.hero-right img {
+  position: relative;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  z-index: 1;
+  filter: drop-shadow(0 10px 25px rgba(0, 0, 0, 0.25));
+}
+
     .main-content {
       flex: 1;
       padding: 30px 20px;
@@ -243,14 +258,27 @@
     </nav>
 
     <main class="main-content">
-      <section class="hero">
-        <div class="hero-left">
-          <h3>— Hello</h3>
-          <h1>
-            <p class="role">I am <span id="changing">Kuldeep Jangid</span></p>
-            <p class="role"><span id="changing-role">Software Developer</span></p>
-          </h1>
-          <p>Hello! I’m <strong>Kuldeep Jangid</strong>, a passionate and dedicated <strong>fresher Software Developer</strong> with a strong foundation in Java, web technologies, and database systems. I enjoy building dynamic, user-friendly web applications and constantly strive to improve my skills in full-stack development. I’m eager to contribute to real-world projects, learn from experienced teams, and grow as a professional in the tech industry.</p>
+    <section class="hero">
+    <div class="hero-left">
+      <h3>— Hello</h3>
+      <h1>
+        <p class="role">I am <span>Kuldeep Jangid</span></p>
+        <p class="role"><span id="changing-role">Java Developer</span></p>
+      </h1>
+
+      <p>
+        I’m <strong>Kuldeep Jangid</strong>, a <strong>Java Developer</strong>
+        with <strong>3 months of hands-on internship experience</strong> as a
+        Java Developer Intern. I specialize in Core Java, JDBC, Servlets,
+        Spring Framework, Spring Boot (basic), and MySQL.
+      </p>
+
+      <p>
+        I enjoy building backend-driven web applications, integrating databases,
+        and writing clean, maintainable code. I’m continuously improving my
+        skills and aiming to grow as a full-stack Java developer.
+      </p>
+
           <div class="social-icons">
             <a href="https://x.com/KuldeepJan66228"><i class="fab fa-twitter"></i></a>
             <a href="https://www.facebook.com/in/"><i class="fab fa-facebook"></i></a>
@@ -259,7 +287,7 @@
           <a href="contact.html" class="contact-btn-outline">Contact Me</a>
         </div>
         <div class="hero-right">
-          <img src="photos/WhatsApp_Image_2025-07-14_at_5.11.08_PM-removebg-preview.png" alt="Kuldeep Jangid">
+          <img src="photos/kuldeep_3-removebg-preview.png" alt="Kuldeep Jangid">
         </div>
       </section>
 

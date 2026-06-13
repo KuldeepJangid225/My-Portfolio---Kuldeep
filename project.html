@@ -8,162 +8,222 @@
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
-    body {
+   
+      /* BODY */
+   * {
       margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(to right, #e3f2fd, #fce4ec);
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+   
+    body {
+background:linear-gradient(-45deg,#0f172a,#1e293b,#312e81,#111827);
+background-size:400% 400%;
+animation:gradient 12s ease infinite;
+color:#fff;
+overflow-x:hidden;
+    }
+
+    .page-wrapper {
+      flex: 1;
       display: flex;
       flex-direction: column;
-      min-height: 100vh;
     }
-
-    header {
-      background-color: #fff;
-      color: #283593;
-      padding: 10px 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: sticky;
-      top: 0;
-      z-index: 999;
+.logo{font-size:28px;font-weight:700;color:#38bdf8}
+  nav{
+position:sticky;
+top:0;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 2%;
+backdrop-filter:blur(20px);
+background:rgba(255,255,255,.08);
+border-bottom:1px solid rgba(255,255,255,.1);
+z-index:1000;
+}
+    nav h2 {
+      color: #fff;
     }
-
-    header h2 {
-      margin: 0;
-    }
-
-    .menu-toggle {
-      display: none;
-      cursor: pointer;
-      margin-left: auto;
-    }
-
     nav ul {
       list-style: none;
       display: flex;
-      margin: 0;
-      padding: 0;
+      gap: 20px;
+      flex-wrap: wrap;
     }
-
-    nav li {
-      margin-left: 20px;
-    }
-
     nav a {
-      color: #283593;
       text-decoration: none;
-      font-weight: bold;
+      color: #fff;
+      font-weight: 500;
     }
-
+    nav ul li a i {
+      margin-right: 6px;
+      color: #38bdf8;
+    }
+    .menu-toggle {
+      display: none;
+      font-size: 24px;
+      cursor: pointer;
+      color: #38bdf8;
+    }
     main {
       flex: 1;
       padding: 20px;
     }
 
-    .project {
-      background: white;
-      border-left: 5px solid #283593;
-      padding: 20px;
-      margin-bottom: 20px;
-      border-radius: 8px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      .project {
+    background: linear-gradient(-45deg, #0f172a, #1e293b, #312e81, #111827);
+    border-left: 5px solid #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.project h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #38bdf8;
+}
+
+.project p {
+    margin: 10px 0;
+    line-height: 1.6;
+}
+
+.project ul {
+    margin: 10px 0 10px 25px;
+    padding-left: 10px;
+}
+
+.project li {
+    margin-bottom: 8px;
+}
+.project {
+    padding: 20px 25px;
+}
+
+    
+.footer{
+    margin-top:80px;
+    padding:30px;
+    text-align:center;
+    background:rgba(255,255,255,.08);
+    backdrop-filter:blur(20px);
+    color:#fff;
+}
+
+.footer .social-links a{
+    color:#38bdf8;
+    margin:0 10px;
+    font-size:24px;
+    transition:.3s;
+}
+
+.footer .social-links a:hover{
+    color:#fff;
+}
+
+   
+@media (max-width:768px){
+
+    nav ul{
+        display:none;
+        flex-direction:column;
+        gap:15px;
+        width:100%;
+        background:#0f172a;
+        padding:20px;
+        position:absolute;
+        top:80px;
+        left:0;
     }
 
-    .project h3 {
-      margin-top: 0;
-      color: #283593;
+    nav ul.active{
+        display:flex;
     }
 
-    footer {
-      background-color: #fff;
-      color: #283593;
-      text-align: center;
-      padding: 20px;
-      margin-top: auto;
+    nav ul a{
+        color:#fff;
     }
 
-    .social-links a {
-      color: #283593;
-      margin: 0 10px;
-      font-size: 1.2rem;
+    .menu-toggle{
+        display:block;
     }
 
-    @media (max-width: 768px) {
-      .menu-toggle {
-        display: block;
-      }
-
-      nav {
-        position: absolute;
-        top: 60px;
-        right: 20px;
-      }
-
-      nav ul {
-        display: none;
-        flex-direction: column;
-        background-color: #fff;
-        border-radius: 8px;
-        width: 200px;
-      }
-
-      nav ul.active {
-        display: flex;
-      }
-
-      nav li {
-        margin: 10px 0;
-        text-align: center;
-      }
+    .hero{
+        flex-direction:column-reverse;
+        text-align:center;
+        gap:30px;
+        padding:40px 20px;
     }
+
+    .hero-right{
+        width:250px;
+        height:250px;
+    }
+
+    .hero-left h1{
+        font-size:28px;
+    }
+
+    .section-title{
+        font-size:32px;
+    }
+}
 
     
   </style>
 </head>
 
 <body>
-  <header>
-    <h2>Kuldeep</h2>
-    <div class="menu-toggle" onclick="toggleMenu()">
-      <i class="fas fa-bars"></i>
-    </div>
+  <div class="page-wrapper">
     <nav>
+<div class="logo">Kuldeep Jangid</div>
+      <div class="menu-toggle" onclick="toggleMenu()">
+        <i class="fas fa-bars"></i>
+      </div>
       <ul id="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="resume.html">Resume</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="index.html"><i class="fas fa-home"></i>Home</a></li>
+        <li><a href="about.html"><i class="fas fa-user"></i>About</a></li>
+        <li><a href="resume.html"><i class="fas fa-graduation-cap"></i>Resume</a></li>
+        <li><a href="project.html"><i class="fas fa-project-diagram"></i>Projects</a></li>
+        <li><a href="contact.html"><i class="fas fa-envelope"></i>Contact</a></li>
       </ul>
     </nav>
-  </header>
+
+
 
   <main>
     <h1>Projects</h1>
 
     <div class="project">
-      <h3>1. Rent Wala – Rental E-Commerce Website</h3>
-      <p><strong>Overview:</strong> Rent Wala is a web-based e-commerce platform for renting a wide range of items including electronics, vehicles, furniture, and wedding/event services.</p>
-      <p><strong>Technologies Used:</strong> Java, Servlets, JSP, MySQL, HTML, CSS, JavaScript, Apache Tomcat.</p>
-      <p><strong>Key Features:</strong></p>
-      <ul>
-        <li>User and Admin login system</li>
-        <li>Rental categories: Electronics, Vehicles, Furniture, Marriage Halls, etc.</li>
-        <li>Product search, booking, and rental duration tracking</li>
-        <li>Admin panel for managing items and orders</li>
-        <li>Responsive UI with secure session handling</li>
-      </ul>
-      
-       <a href="www.techkuldeep.xyz" ><button class="btn-download" style="background-color: #283593; color: #fff;border-radius: 24px; font-size: 16px; position: relative; border: none;
-      padding: 12px 24px;
-      margin: 1px;
-      font-size: 16px;
-      border-radius: 24px;
-      cursor: pointer;
-      box-shadow: 0 3px 6px rgba(40,53,147,0.3);">Links</button></a>
-    </div>
+    <h3>1. SuperTrack E-Commerce Platform</h3>
 
+    <p><strong>Overview:</strong> A full-stack e-commerce web application with secure authentication, product management, shopping cart, order processing, and admin dashboard features.</p>
+
+    <p><strong>Technologies Used:</strong> Java 21, Spring Boot, Spring Security, JWT, Thymeleaf, Hibernate/JPA, MySQL, HTML, CSS, JavaScript, Maven.</p>
+
+    <p><strong>Key Features:</strong></p>
+    <ul>
+        <li>User Registration, Login & JWT Authentication</li>
+        <li>OTP-Based Password Reset</li>
+        <li>Product Search, Categories & Cart Management</li>
+        <li>Order Processing, Invoice Generation & Re-Order</li>
+        <li>Admin Dashboard for Products, Users & Orders</li>
+        <li>Role-Based Access Control (ADMIN / USER)</li>
+        <li>Responsive and Secure UI</li>
+    </ul>
+
+    <a href="https://github.com/KuldeepJangid225/SuperTrack-E-Commerce/" target="_blank">
+        <button class="btn-download"
+            style="background-color:#283593;color:#fff;border:none;padding:12px 24px;border-radius:24px;cursor:pointer;box-shadow:0 3px 6px rgba(40,53,147,0.3);">
+            Live Demo
+        </button>
+    </a>
+</div>
    <div class="project">
   <h3>2. Calculator (HTML, CSS & JavaScript)</h3>
 
@@ -207,16 +267,18 @@
 
   </main>
 
-  <footer>
-    <h2>Kuldeep Jangid</h2>
-    <div class="social-links">
-     <a href="https://www.youtube.com" target="_blank" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <h2>Kuldeep Jangid</h2>
+        <div class="social-links">
+          <a href="https://www.youtube.com" target="_blank" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
           <a href="https://www.linkedin.com/in/kuldeep-jangid-jaipur/" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
           <a href="mailto:kj623178@gmail.com" title="Gmail"><i class="fa-solid fa-envelope"></i></a>
           <a href="tel:+916376778170" title="Phone"><i class="fa-solid fa-phone"></i></a>
-    </div>
-    <p>&copy; 2025 Kuldeep Jangid. All rights reserved.</p>
-  </footer>
+        </div>
+      </div>
+    </footer>
 
   <script>
     function toggleMenu() {
